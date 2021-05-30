@@ -25,18 +25,21 @@ class PersonTest {
     @BeforeEach
     void setup() {
         personRepository.deleteAll();
-        Perso
-        List<Person> persons = new ArrayList<>();
-        persons.add(new Person());
-        persons.get(0);
-        for (String s: persons){
-            Location location = new Location();
-            location.setDiscription(s);
-            locationRepository.save(location);
+
         }
-    }
+
     @Test
-    void getName() {
+    void testPersonDataInsertion() {
+        String[] names = new String[]{"Choudary", "Trankalis","Mustermann", "Doe","Duck","Dachs"};
+        String[] firstnames = new String[]{"Micheal", "Marc","Max", "John","Donald","Emil"};
+        for( int i = 0 ; i <5; i++){
+            Person person = new Person();
+            person.setName(names[i]);
+            person.setFirstname(firstnames[i]);
+            personRepository.save(person);
+
+            assertNotNull(personRepository.findByName("Choudary"));
+       }
     }
 
     @Test

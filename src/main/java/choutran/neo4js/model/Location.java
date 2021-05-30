@@ -19,7 +19,7 @@ public class Location {
     @GeneratedValue
     private Long id;
 
-    private String discription;
+    private String description;
 
     @Relationship(type="visited", direction = Relationship.Direction.INCOMING)
     List<Person> visitors;

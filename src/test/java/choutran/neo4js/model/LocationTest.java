@@ -32,13 +32,13 @@ class LocationTest {
         List<String> locations = Arrays.asList("Sternschanze", "BT5", "REWE");
         for (String s: locations){
             Location location = new Location();
-            location.setDiscription(s);
+            location.setDescription(s);
             locationRepository.save(location);
         }
 
-        assertNotNull(locationRepository.findByDiscription("Sternschanze"));
-        assertNotNull(locationRepository.findByDiscription("BT5"));
-        assertNotNull(locationRepository.findByDiscription("REWE"));
+        assertNotNull(locationRepository.findByDescription("Sternschanze"));
+        assertNotNull(locationRepository.findByDescription("BT5"));
+        assertNotNull(locationRepository.findByDescription("REWE"));
     }
 
     @Test
