@@ -22,8 +22,6 @@ public class Person {
     private String firstname;
 
     @Relationship(type="contact_with", direction = Relationship.Direction.INCOMING)
-    List<Person> contacts;
+    List<Contacts> contacts;
 
-    @Relationship(type="visited", direction = Relationship.Direction.OUTGOING)
-    List<Location> visits;
 }
