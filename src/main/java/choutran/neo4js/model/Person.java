@@ -22,6 +22,13 @@ public class Person {
     private String firstname;
 
     @Relationship(type="contact_with", direction = Relationship.Direction.INCOMING)
-    List<Contacts> contacts;
+    List<Contacts> contact_with;
+
+    public void addContact(Contacts contact){
+        contact_with.add(contact);
+    }
+    public void clearContacts(){
+        contact_with.clear();
+    }
 
 }

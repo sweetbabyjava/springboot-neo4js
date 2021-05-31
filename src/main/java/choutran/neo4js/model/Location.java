@@ -22,5 +22,5 @@ public class Location {
     private String description;
 
     @Relationship(type="visited", direction = Relationship.Direction.INCOMING)
-    List<Visits> visitors;
+    List<Visits> visited;
 }

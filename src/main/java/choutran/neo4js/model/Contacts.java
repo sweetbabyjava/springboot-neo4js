@@ -23,6 +23,11 @@ public class Contacts {
     private final int duration;
 
     @TargetNode
-    private final Person person;
+    private Person person;
 
+    public Contacts(Person person, Date date, int duration) {
+        this.person = person;
+        this.date = date;
+        this.duration = duration;
+    }
 }
